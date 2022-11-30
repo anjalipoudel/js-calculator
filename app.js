@@ -1,26 +1,30 @@
-(function () {
-    let screen = get.document.querySelector('.screen');
-    let buttons = get.document.querySelectorAll('.btn')
-    let clear = get.document.querySelector('.btn-clear');
-    let equal = get.document.querySelectorAll('.btn-equal')
-    buttons.forEach(function (button) {
 
+let screen = document.getElementById('screen');
+let buttons = document.querySelectorAll('button');
+let screenValue = '';
 
-        button.addEventListener('click', function (e) {
-            let vlaue = e.target.dataset.num;
-            screen.Value += vlaue;
-        });
-    });
-    equal.addEventListener('click', function (e) {
-        if (screen.Value === '') {
-            screen.Value = "please enter";
+for (item of buttons) {
+    item.addEventListener('click', (e) => {
+        buttonText = e.target.dataset.num;
+        console.log('button text is', buttonText);
+        if (buttonText == "=") {
+            screen.value = eval(screenValue);
+        }
+        else if (buttonText == "AC") {
+            screenValue = "";
+            screen.value = screenValue;
+        }
+        else if (buttonText == "OFF") {
+            screenValue = "";
+            screen.value = screenValue;
         }
         else {
-            let answer = eval(screen.Value);
-            screen.Value = answer;
+            screenValue += buttonText;
+            screen.value = screenValue;
         }
-    });
-    clear.addEventListener('click', function (e) {
-        screen.Value = '';
-    })()
-});
+    })
+};
+
+
+
+
