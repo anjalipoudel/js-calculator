@@ -70,3 +70,8 @@ button {
 .btn-delete {
   background-color: rgb(58, 56, 56);
 }
+
+.footer-text {
+  position: absolute;
+  bottom: 0;
+}
