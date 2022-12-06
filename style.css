@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
   justify-content: center;
@@ -10,6 +11,7 @@ body {
   min-height: 100vh;
   background: #ecd5d5;
 }
+
 .calculator {
   width: 350px;
   height: 570px;
@@ -32,6 +34,7 @@ form input {
   text-align: right;
   pointer-events: none;
 }
+
 .btn {
   color: white;
 }
@@ -47,6 +50,7 @@ button {
   border-radius: 12px;
   cursor: pointer;
 }
+
 .buttons {
   flex-wrap: wrap;
   display: flex;
@@ -54,9 +58,11 @@ button {
   justify-content: space-between;
   padding: 20px;
 }
+
 .btn-num {
   background-color: #b3b2b2;
 }
+
 .btn-symbol {
   background-color: #f59906;
 }
@@ -64,9 +70,11 @@ button {
 .btn-equal {
   background-color: #008000;
 }
+
 .btn-clear {
   background-color: red;
 }
+
 .btn-delete {
   background-color: rgb(58, 56, 56);
 }
